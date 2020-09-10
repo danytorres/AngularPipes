@@ -57,10 +57,49 @@
                 </tr>
                 <tr>
                     <td> {{ porcentaje }} </td>
-                    <td> percent </td>
+                    <td> percent:'2.2-2' </td>
                     <td> {{ porcentaje | percent:'2.2-2' }} </td>
                 </tr>
-
+                <tr>
+                    <td> {{ salario }} </td>
+                    <td> currency </td>
+                    <td> {{ salario | currency }} </td>
+                </tr>
+                <tr>
+                    <td> {{ salario }} </td>
+                    <td> currency: 'EUR' </td>
+                    <td> {{ salario | currency: 'EUR' }} </td>
+                </tr>
+                <tr>
+                    <td> {{ salario }} </td>
+                    <td> currency: 'CAD':'symbol':'.0-0' </td>
+                    <td> {{ salario | currency: 'CAD':'symbol':'.0-0' }} </td>
+                </tr>
+                <tr>
+                    <td> {{ valorPromesa }} </td>
+                    <td> asycn </td>
+                    <td> {{ valorPromesa | async }} </td>
+                </tr>
+                <tr>
+                    <td> {{ fecha }} </td>
+                    <td> date </td>
+                    <td> {{ fecha | date }} </td>
+                </tr>
+                <tr>
+                    <td> {{ fecha }} </td>
+                    <td> date:'medium' </td>
+                    <td> {{ fecha | date:'medium' }} </td>
+                </tr>
+                <tr>
+                    <td> {{ fecha }} </td>
+                    <td> date:'short' </td>
+                    <td> {{ fecha | date:'short' }} </td>
+                </tr>
+                <tr>
+                    <td> {{ fecha }} </td>
+                    <td> date:'MMMM - dd' </td>
+                    <td> {{ fecha | date:'MMMM - dd' }} </td>
+                </tr>
 
             </tbody>
         </table>
@@ -69,6 +108,16 @@
         <ul>
             <li *ngFor="let item of arreglo | slice:5:20"> {{ item }} </li>
         </ul>
+
+        <h3>JSON</h3>
+        <hr>
+        <div class="row mb-5">
+            <div class="col">
+                <pre>
+                {{ heroe | json }}
+              </pre>
+            </div>
+        </div>
 
     </div>
 </div>
