@@ -100,6 +100,26 @@
                     <td> date:'MMMM - dd' </td>
                     <td> {{ fecha | date:'MMMM - dd' }} </td>
                 </tr>
+                <tr>
+                    <td> {{ fecha }} </td>
+                    <td> fecha | date:'MMMM - dd':'':'{{idioma}}'
+                        <br>
+                        <button (click)="idioma='es'" class="mr-1 btn btn-primary">Español</button>
+                        <button (click)="idioma='en'" class="mr-1 btn btn-secondary">Ingles</button>
+                        <button (click)="idioma='fr'" class="mr-1 btn btn-success">Frances</button>
+                    </td>
+                    <td> {{ fecha | date:'MMMM - dd':'':idioma }} </td>
+                </tr>
+                <tr>
+                    <td> {{ nombre }} </td>
+                    <td> contrasena:{{activar}}
+                        <br>
+                        <button (click)="activar=!activar" class="btn btn-outline-primary">
+                            activar/desactivar
+                        </button>
+                    </td>
+                    <td> {{ nombre | contrasena:activar}} </td>
+                </tr>
 
             </tbody>
         </table>
